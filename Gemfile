@@ -8,6 +8,7 @@ gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "sass-rails", ">= 6"
 
+gem "bootstrap-sass", "3.4.1"
 gem "jbuilder", "~> 2.7"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
@@ -37,3 +38,5 @@ group :development, :test do
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
 end
+
+gem "config"
