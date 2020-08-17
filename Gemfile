@@ -41,4 +41,5 @@ group :development, :test do
 end
 
 gem "config"
+gem "jquery-rails", "4.3.1"
 
