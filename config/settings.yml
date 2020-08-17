@@ -11,4 +11,8 @@ validations:
     max_length: 255
     regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
   password:
-    min_length: 12
+    min_length: 6
+    
+signup:
+  gravatar:
+    url: https://secure.gravatar.com/avatar/

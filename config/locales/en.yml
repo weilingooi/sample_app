@@ -32,4 +32,13 @@
 en:
   hello: "Hello world"
   title: "Ruby on Rails Tutorial Sample App"
-
+  users:
+    new:
+      sign_up: "Sign Up"
+      confirmation: "Confirmation"
+      create_my_account: "Create my account"
+      the_form_contains: "The form contains: "
+    create:
+      welcome: " Welcome to Sample App!"
+      error: " Failed in account registration "
+    user_not_found: " User Not Found "
