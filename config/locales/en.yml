@@ -56,6 +56,7 @@ en:
   sessions:
     new_user: " New User?"
     sign_up_now: "Sign Up Now!"
+    remember-me: "Remember me on this device"
     create:
       login_sucess: "Log in sucessfully!"
       invalid_email_password_combination: " Invalid email/password combination! "

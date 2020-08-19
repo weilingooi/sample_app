@@ -16,3 +16,5 @@ validations:
 signup:
   gravatar:
     url: https://secure.gravatar.com/avatar/
+
+remember_me: "1"
