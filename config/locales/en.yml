@@ -34,24 +34,39 @@ en:
   title: "Ruby on Rails Tutorial Sample App"
   home: "Home"
   help: "Help"
+  sample_app: "Sample App"
   user: "User"
   account: "Account"
   profile: "Profile"
   settings: "Settings"
-  logout: "Log Out"
-  log_in: "Log In"
-  
   
   users:
     new:
       sign_up: "Sign Up"
+      sign_up_button: " Sign Up"
       confirmation: "Confirmation"
       create_my_account: "Create my account"
       the_form_contains: "The form contains: "
-    create:
       welcome: " Welcome to Sample App!"
       error: " Failed in account registration "
-    user_not_found: " User Not Found "
+      name: "Name"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+    show:
+      user_not_found: " User Not Found "
+    edit:
+      edit_user: "Update"
+      title: " Update your profile "
+      save_changes: "Save change"
+      update_success: "Updated sucessfully"
+      update_fail: "Fail to update. Please try again!"
+    index:
+      title: "List all users"
+      avatar: "Avatar"
+      delete: "Delete"
+      confirm: "Are you sure to delete this user?"
+      delete_success: "You deleted successfully"
+      delete_fail: "You deleted unsuccessfully"
     
   sessions:
     new_user: " New User?"
@@ -61,3 +76,15 @@ en:
       login_sucess: "Log in sucessfully!"
       invalid_email_password_combination: " Invalid email/password combination! "
       logout_sucess: "Log out sucessfully!"
+    not_login: "You do not log in"
+    incorrect_user: " Incorrect User!"
+    logout: "Log Out"
+    log_in: "Log In"
+
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"

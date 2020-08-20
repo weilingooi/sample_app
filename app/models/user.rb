@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-  USERS_PARAMS = %i(name email password password_confirmation).freeze
+  VALID_EMAIL_REGEX = Settings.validations.email.regex
+  CREATE_USERS_PARAMS = %i(name email password password_confirmation).freeze
+  UPDATE_USERS_PARAMS = %i(name password password_confirmation).freeze
   attr_accessor :remember_token
 
   before_save{self.email = email.downcase}
@@ -9,7 +11,9 @@ class User < ApplicationRecord
     length: {maximum: Settings.validations.email.max_length},
     format: {with: Settings.validations.email.regex}
   validates :password, presence: true,
-    length: {minimum: Settings.validations.password.min_length}
+    length: {minimum: Settings.validations.password.min_length},
+    allow_nil: true
+    
   has_secure_password
 
   class << self

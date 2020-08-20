@@ -43,3 +43,6 @@ end
 gem "config"
 gem "jquery-rails", "4.3.1"
 
+gem "faker", "1.7.3"
+gem "kaminari"
+gem "bootstrap-kaminari-views"
