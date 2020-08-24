@@ -80,7 +80,14 @@ en:
     incorrect_user: " Incorrect User!"
     logout: "Log Out"
     log_in: "Log In"
-
+    mail:
+      notice: "Please check your email to activate your account"
+      not_activated: "Account not activated. Check your email for the activation link."
+      greeting: "Hi"
+    status: "Status"
+    verified: "Activated"
+    un_verified: "Unactivated"
+    
   views:
     pagination:
       first: "« FIRST"
@@ -88,3 +95,15 @@ en:
       previous: "‹ PREV"
       next: "NEXT ›"
       truncate: "…"
+  
+  user_mailer: 
+    acc_active: "Account Activation"
+    hello: "Hello"
+    introduce: "Welcome to Sample App! Click the link below to activate your account:"
+    activate_link: "Activate"
+    acc_heading: "Sample App"
+
+    account_activations:
+    active_fail: "Invalid activation link."
+    active_success: "Account activated!"
+
