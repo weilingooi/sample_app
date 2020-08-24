@@ -1,3 +1,5 @@
+@import 'color';
+
 /* universal */
 
 body {
@@ -26,7 +28,7 @@ textarea{
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: $logo-white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -34,7 +36,7 @@ textarea{
 }
 
 #logo:hover{
-  color: #fff ;
+  color: $hover-black;
   text-decoration: none;
 }
 
@@ -97,7 +99,7 @@ input.btn.btn-primary {
 #error_explanation {
   color: red;
   ul {
-    color: red;
+    color: $red;
     margin: 0 0 30px;
   }
 }
@@ -106,7 +108,7 @@ input.btn.btn-primary {
   //@extend .has-error;
   .form-control {
     li {
-    color: red;
+    color: $red;
      }
   } 
 }
@@ -124,4 +126,21 @@ input.btn.btn-primary {
 #session_remember_me {
   margin-left: 0;
   width: auto;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid red;
+  }
+
+  input.btn.btn-warning {
+    color: $red;
+    background-color: $background-warning;
+    border-color: $warning-bother;
+    margin-top: 10px;
+  }
 }
