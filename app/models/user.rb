@@ -3,6 +3,7 @@ class User < ApplicationRecord
   CREATE_USERS_PARAMS = %i(name email password password_confirmation).freeze
   UPDATE_USERS_PARAMS = %i(name password password_confirmation).freeze
   attr_accessor :remember_token, :activation_token, :reset_token
+  has_many :microposts, dependent: :destroy
   before_save :downcase_email
   before_create :create_activation_digest
 
@@ -42,6 +43,10 @@ class User < ApplicationRecord
     digest = send "#{attribute}_digest"
     return false unless digest
     BCrypt::Password.new(digest).is_password? token
+  end
+
+  def feed
+    microposts
   end
 
   def forget

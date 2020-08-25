@@ -4,7 +4,10 @@ class UsersController < ApplicationController
   before_action :find_user, except: %i(new create index)
   before_action :correct_user, only: %i(edit update)
     
-  def show; end
+  def show
+    @microposts = @user.microposts.paginate page: params[:page]
+  end
+  
 
   def new
     @user = User.new
