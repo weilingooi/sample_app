@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new create_user_params  
     if @user.save
-      log_in @user
-      flash[:success] = t ".welcome"
-      redirect_to @user
+      @user.send_mail_activate
+      flash[:success] = t "sessions.mail.notice"
+      redirect_to root_path
     else
       flash.now[:danger] = t ".error"
       render :new
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @user = User.select(:id, :name, :email)
+    @user = User.select(:id, :name, :email, :activated)
                 .page(params[:page]).per Settings.per_page
   end
 
