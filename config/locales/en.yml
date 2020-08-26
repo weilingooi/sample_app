@@ -67,6 +67,7 @@ en:
       confirm: "Are you sure to delete this user?"
       delete_success: "You deleted successfully"
       delete_fail: "You deleted unsuccessfully"
+    no_exist: "This account does not exist"
     
   sessions:
     new_user: " New User?"
@@ -87,7 +88,36 @@ en:
     status: "Status"
     verified: "Activated"
     un_verified: "Unactivated"
-    
+    forgot_password:
+      forget_password: "Forget Password"
+      send_request_success: "Check your email to reset your password"
+      title: "Request to reset password"
+      button_send: "Submit"
+      error_token_or_unactivated: "Sorry, the request does not exist or your account is not activated"
+      reset_password_success: "You have just changed password successfully"
+      reset_password_fail: "You have just changed password unsuccessfully"
+    reset:
+      title: "To reset your password click the link below:"
+      expire: "This link will expire in two hours."
+      remind: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+
+    activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "This email address was existed"
+              invalid: "Email address must be in the correct format"
+              blank: "Email address cannot be null"
+            name:
+              blank: "Name cannot be null"
+            password:
+              blank: "Password cannot be null"
+            password_confirmation:
+              confirmation: "Password confirmation does not match"
+              blank: "Password cannot be null"
+
   views:
     pagination:
       first: "« FIRST"
