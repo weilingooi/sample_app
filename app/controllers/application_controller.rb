@@ -3,10 +3,6 @@ class ApplicationController < ActionController::Base
   
   before_action :switch_locale
 
-  def default_url_options
-    {locale: I18n.locale}
-  end
-
   private
   
   def switch_locale
@@ -18,7 +14,11 @@ class ApplicationController < ActionController::Base
     I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
   end
 
-  def logged_in_user
+  def default_url_options
+    {locale: I18n.locale}
+  end
+
+  def check_login
     return if logged_in?
 
     store_location

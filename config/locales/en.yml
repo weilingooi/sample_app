@@ -126,7 +126,9 @@ en:
             password_confirmation:
               confirmation: "Password confirmation does not match"
               blank: "Password cannot be null"
-  
+  password_reset:
+    expired: "Password reset has expired."
+
   microposts:
     title: "Microposts"
     posted: "Posted"
@@ -165,3 +167,11 @@ en:
     messages:
       invalid_pic: "must be a valid image format"
       less_than: "should be less than 5MB"
+
+follow:
+    follower_title: "Followers"
+    following_title: "Following"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    action_fail: "Somethings went wrong, try again later"
+    view_profile: "View my profile"
