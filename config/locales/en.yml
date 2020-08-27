@@ -39,11 +39,19 @@ en:
   account: "Account"
   profile: "Profile"
   settings: "Settings"
+  error: "error"
   
+  static_pages:
+    home:
+      title: "This is home page"
+      welcome: "Welcome to Ruby on Rails Tutorials"
+    help:
+      title: "This is help page"
+
   users:
     new:
       sign_up: "Sign Up"
-      sign_up_button: " Sign Up"
+      sign_up_button: " Sign Up Now! "
       confirmation: "Confirmation"
       create_my_account: "Create my account"
       the_form_contains: "The form contains: "
@@ -54,6 +62,7 @@ en:
       password_confirmation: "Password Confirmation"
     show:
       user_not_found: " User Not Found "
+      login_remind: "Please Log In"
     edit:
       edit_user: "Update"
       title: " Update your profile "
@@ -117,6 +126,19 @@ en:
             password_confirmation:
               confirmation: "Password confirmation does not match"
               blank: "Password cannot be null"
+  
+  microposts:
+    title: "Microposts"
+    posted: "Posted"
+    time_ago: "ago"
+    create_success: "Micropost created successfully"
+    create_fail: "Micropost is failed to created "
+    write: "What's on your mind...?"
+    delete: "Are you sure to delete this micropost ?"
+    delete_success: "You deleted micropost successfully"
+    delete_fail: "You are failed to delete micropost"
+    image_size: "Maximum file size upload must be smaller than 5MB"
+    post: "Post"
 
   views:
     pagination:
@@ -132,8 +154,14 @@ en:
     introduce: "Welcome to Sample App! Click the link below to activate your account:"
     activate_link: "Activate"
     acc_heading: "Sample App"
-
-    account_activations:
     active_fail: "Invalid activation link."
     active_success: "Account activated!"
 
+  shared:
+    place_holder: "Compose new micropost..."
+    post: "Post"
+
+  errors:
+    messages:
+      invalid_pic: "must be a valid image format"
+      less_than: "should be less than 5MB"
