@@ -1,6 +1,6 @@
 class PasswordResetsController < ApplicationController
   before_action :get_user, :valid_user, only: %i(edit update)
-
+  before_action :valid_user, :check_expiration, only: %i(edit update)
   def new; end
 
   def create
@@ -50,4 +50,10 @@ class PasswordResetsController < ApplicationController
     flash[:warning] = t "sessions.forgot_password.error_token_or_unactivated"
     redirect_to root_path
   end
+
+  def check_expiration
+    return unless @user.password_reset_expired?
+
+    flash[:danger] = t "password_reset.expired"
+    redirect_to new_password_reset_path
 end

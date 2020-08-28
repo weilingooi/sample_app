@@ -1,35 +1,6 @@
 <%= provide :title, t("users.index.title") %>
 <h1><%= t "users.index.title" %></h1>
-<table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th><%= t ".avatar" %></th>
-      <th><%= t "users.new.name" %></th>
-      <th>Email</th>
-      <% if current_user.admin? %>
-        <th><%= t ".delete" %></th>
-        <th><%= t ".sessions.status" %></th>
-      <% end %>
-    </tr>
-  </thead>
-  <tbody>
-  <% render @users %>
-    <tr>
-      <td><%= gravatar_for user %></td>
-      <td><%= user.name %></td>
-      <td><%= user.email %></td>
-      <% if current_user.admin? %>
-        <td><%= link_to t(".delete"), user, method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %></td>
-        <td>
-          <% if user.activated? %>
-            <span class="btn btn-success"><%= t "sessions.verified" %></span>
-          <% else %>
-            <span class="btn btn-warning"><%= t "sessions.un_verified" %></span>
-          <% end %>
-        </td>
-      <% end %>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+<ul class="users">
+  <%= render @user %>
+</ul>
 <%= paginate @user, theme: "twitter-bootstrap-3" %>

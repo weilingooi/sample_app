@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     
   def show
     @microposts = @user.microposts.paginate page: params[:page]
+    @follow = current_user.active_relationships.build
+    @unfollow = current_user.following
   end
   
 
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new create_user_params  
+    
     if @user.save
       @user.send_mail_activate
       flash[:success] = t "sessions.mail.notice"

@@ -7,6 +7,7 @@
   </span>
   <span class="timestamp">
     <%= t "microposts.posted" %> <%= time_ago_in_words micropost.created_at %> <%= t "microposts.time_ago" %>
+    <%= time_ago_in_words micropost.created_at %>
     <% if current_user? micropost.user %>
       <%= link_to t("users.index.delete"), micropost, method: :delete, data: {confirm: t("microposts.delete")} %>
     <% end %>
